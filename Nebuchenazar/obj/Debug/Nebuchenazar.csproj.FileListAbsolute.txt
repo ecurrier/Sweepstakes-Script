@@ -1,0 +1,6 @@
+c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\bin\Debug\Nebuchenazar.exe.config
+c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\bin\Debug\Nebuchenazar.exe
+c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\bin\Debug\Nebuchenazar.pdb
+c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\obj\Debug\Nebuchenazar.csprojResolveAssemblyReference.cache
+c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\obj\Debug\Nebuchenazar.exe
+c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\obj\Debug\Nebuchenazar.pdb
