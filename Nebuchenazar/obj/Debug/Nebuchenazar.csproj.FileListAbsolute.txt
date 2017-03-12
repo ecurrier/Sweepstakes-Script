@@ -4,3 +4,9 @@ c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\bi
 c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\obj\Debug\Nebuchenazar.csprojResolveAssemblyReference.cache
 c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\obj\Debug\Nebuchenazar.exe
 c:\users\evan\documents\visual studio 2015\Projects\Nebuchenazar\Nebuchenazar\obj\Debug\Nebuchenazar.pdb
+C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.exe.config
+C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.exe
+C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.pdb
+C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.exe
+C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.pdb
+C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.csprojResolveAssemblyReference.cache

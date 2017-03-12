@@ -1,65 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
 
 namespace Nebuchenazar
 {
     class Program
     {
+        enum Codes
+        {
+            NonExistant = 12,
+            Ended = 821,
+            Ok = 871
+        }
+
         static void Main(string[] args)
         {
-            // Load dictionary data into an array
-            string[] dictionary = File.ReadAllLines("C:\\Users\\Evan\\Desktop\\dictionary.txt");
-            
-            // Run loop, parsing the website plus a word from the array
-            for(var i=0; i < dictionary.Length; i++)
+            var validKeywords = new List<string>();
+            using (var reader = new StreamReader("..\\..\\..\\dictionary.txt"))
             {
-                if(i%10 == 0)
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    Thread.Sleep(15000);
-                }
+                    Thread.Sleep(100);
+                    var url = "http://www.heyyourcity.com/c/" + line;
 
-                Thread.Sleep(5000);
-
-                var url = "http://www.heyyourcity.com/c/" + dictionary[i];
-
-                try
-                {
-                    WebRequest request = WebRequest.Create(url);
+                    var request = WebRequest.Create(url);
                     request.Method = "GET";
-                    WebResponse response = request.GetResponse();
 
-                    Stream stream = response.GetResponseStream();
-                    StreamReader reader = new StreamReader(stream);
-
-                    string content = reader.ReadToEnd();
-                    reader.Close();
-                    response.Close();
-
-                    if(content.Equals("coming soon!"))
+                    try
                     {
-                        continue;
+                        var response = request.GetResponse();
+                        var responseStream = response.GetResponseStream();
+                        var responseReader = new StreamReader(responseStream);
+
+                        var content = responseReader.ReadToEnd();
+                        responseReader.Close();
+                        response.Close();
+
+                        if (content.Contains("<title>Age Gate</title>"))
+                        {
+                            Console.WriteLine($"Valid Keyword found: {line}");
+                            validKeywords.Add(line);
+                        }
                     }
-
-                    var endedMessage = content.ToLower().IndexOf("this sweepstakes has ended.");
-
-                    if(endedMessage == -1)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine(dictionary[i] + " - Found.\n");
+
                     }
-                }
-                catch(Exception ex)
-                {
-                    Console.Write("Exception occured\n");
-                    continue;
                 }
             }
-
-            Console.ReadKey();
         }
     }
 }
