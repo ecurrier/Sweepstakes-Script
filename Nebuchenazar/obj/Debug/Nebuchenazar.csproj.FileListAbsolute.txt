@@ -10,3 +10,9 @@ C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenaza
 C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.exe
 C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.pdb
 C:\Users\ECurrier.SONOMAPARTNERS\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.csprojResolveAssemblyReference.cache
+C:\Users\ecurri3\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.exe.config
+C:\Users\ecurri3\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.exe
+C:\Users\ecurri3\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.pdb
+C:\Users\ecurri3\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.exe
+C:\Users\ecurri3\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\bin\Debug\Nebuchenazar.pdb
+C:\Users\ecurri3\Documents\GitHub\Sweepstakes-Script\Nebuchenazar\obj\Debug\Nebuchenazar.csprojResolveAssemblyReference.cache

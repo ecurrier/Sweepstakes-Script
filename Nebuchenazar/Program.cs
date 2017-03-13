@@ -8,16 +8,8 @@ namespace Nebuchenazar
 {
     class Program
     {
-        enum Codes
-        {
-            NonExistant = 12,
-            Ended = 821,
-            Ok = 871
-        }
-
         static void Main(string[] args)
         {
-            var validKeywords = new List<string>();
             using (var reader = new StreamReader("..\\..\\..\\dictionary.txt"))
             {
                 string line;
@@ -42,7 +34,10 @@ namespace Nebuchenazar
                         if (content.Contains("<title>Age Gate</title>"))
                         {
                             Console.WriteLine($"Valid Keyword found: {line}");
-                            validKeywords.Add(line);
+
+                            var outputFile = new StreamWriter("..\\..\\..\\results.txt", true);
+                            outputFile.WriteLine(line);
+                            outputFile.Close();
                         }
                     }
                     catch (Exception ex)
