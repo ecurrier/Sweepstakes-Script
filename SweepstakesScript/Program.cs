@@ -9,9 +9,11 @@ namespace Nebuchenazar
         {
             var lithubLogic = new LitHubLogic();
             var reelsweetLogic = new ReelSweetLogic();
+            var amoeLogic = new AMOELogic();
 
             lithubLogic.Execute();
             reelsweetLogic.Execute();
+            amoeLogic.Execute();
 
             Environment.Exit(0);
         }

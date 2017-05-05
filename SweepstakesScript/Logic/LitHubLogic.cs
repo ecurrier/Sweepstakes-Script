@@ -17,7 +17,8 @@ namespace SweepstakesScripter.Logic
             { "loken.erica@gmail.com", "340a8420d5" },
             { "erica.loken@yahoo.com", "d0aadc49cf"},
             { "sarahbeth.ellison@gmail.com", "4d4aae6b6d" },
-            { "sarahbella224@aol.com", "58f274852b" }
+            { "sarahbella224@aol.com", "58f274852b" },
+            { "chrisdbad@yahoo.com", "40c23bd50e"}
         };
 
         private static string uParameter = "5d9b50f912e18fb44e8d7b091";

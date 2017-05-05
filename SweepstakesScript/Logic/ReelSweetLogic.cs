@@ -18,8 +18,11 @@ namespace SweepstakesScripter.Logic
         {
             var AllEntries = new List<EntryData>();
             AllEntries.Add(new EntryData("Evan", "Currier", "emc2207@yahoo.com", "1993-07-22"));
+            AllEntries.Add(new EntryData("Evan", "Currier", "ecurri3@gmail.com", "1993-07-22"));
             AllEntries.Add(new EntryData("Sarah", "Ellison", "sarahbella224@aol.com", "1992-12-23"));
             AllEntries.Add(new EntryData("Erica", "Loken", "erica.loken@yahoo.com", "1992-01-26"));
+            AllEntries.Add(new EntryData("Chris", "Badolato", "chrisdbady@yahoo.com", "1993-01-14"));
+            AllEntries.Add(new EntryData("Reid", "Olsen", "reidodorito@gmail.com", "1992-09-30"));
 
             foreach (var entry in AllEntries)
             {

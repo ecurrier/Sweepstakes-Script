@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\AMOELogic.cs" />
     <Compile Include="Logic\EntryData.cs" />
     <Compile Include="Logic\LitHubLogic.cs" />
     <Compile Include="Logic\ReelSweetLogic.cs" />
