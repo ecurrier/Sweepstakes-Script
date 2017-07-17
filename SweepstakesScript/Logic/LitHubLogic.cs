@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 
-namespace SweepstakesScripter.Logic
+namespace SweepstakesScript.Logic
 {
     public class LitHubLogic
     {
@@ -18,7 +18,8 @@ namespace SweepstakesScripter.Logic
             { "erica.loken@yahoo.com", "d0aadc49cf"},
             { "sarahbeth.ellison@gmail.com", "4d4aae6b6d" },
             { "sarahbella224@aol.com", "58f274852b" },
-            { "chrisdbad@yahoo.com", "40c23bd50e"}
+            { "chrisdbad@yahoo.com", "40c23bd50e"},
+            { "terylmthurman@gmail.com", "45f69ba2e1"}
         };
 
         private static string uParameter = "5d9b50f912e18fb44e8d7b091";

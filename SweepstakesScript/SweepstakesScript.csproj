@@ -47,6 +47,8 @@
     <Compile Include="Logic\AMOELogic.cs" />
     <Compile Include="Logic\EntryData.cs" />
     <Compile Include="Logic\LitHubLogic.cs" />
+    <Compile Include="Logic\PepsiLogic.cs" />
+    <Compile Include="Logic\PotbellyLogic.cs" />
     <Compile Include="Logic\ReelSweetLogic.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

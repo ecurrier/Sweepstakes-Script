@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Mail;
 
-namespace SweepstakesScripter.Logic
+namespace SweepstakesScript.Logic
 {
     public class AMOELogic
     {

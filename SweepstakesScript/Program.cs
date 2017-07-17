@@ -1,7 +1,7 @@
-﻿using SweepstakesScripter.Logic;
+﻿using SweepstakesScript.Logic;
 using System;
 
-namespace Nebuchenazar
+namespace SweepstakesScript
 {
     class Program
     {
@@ -9,11 +9,11 @@ namespace Nebuchenazar
         {
             var lithubLogic = new LitHubLogic();
             var reelsweetLogic = new ReelSweetLogic();
-            var amoeLogic = new AMOELogic();
+            var potbellyLogic = new PotbellyLogic();
 
             lithubLogic.Execute();
             reelsweetLogic.Execute();
-            amoeLogic.Execute();
+            potbellyLogic.Execute();
 
             Environment.Exit(0);
         }

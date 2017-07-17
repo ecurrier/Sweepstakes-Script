@@ -60,8 +60,8 @@ namespace SweepstakesScript.Logic
         private void RandomSleep()
         {
             var random = new Random();
-            var maxValue = 15f;
-            var minValue = 5f;
+            var maxValue = 4f;
+            var minValue = 2f;
 
             var range = maxValue - minValue;
             var sample = random.NextDouble();
