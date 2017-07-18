@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SweepstakesFinder.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -11,50 +12,66 @@ namespace SweepstakesScript.Logic
     {
         private Dictionary<string, string> accountDictionary;
 
-        public void Execute(string accountCode, int hourLimit)
+        public void TimedExecute(string accountCode, int startingNumber, int minuteLimit)
         {
-            // Create start time
+            Console.Clear();
+            Console.WriteLine($"Running logic for {minuteLimit} minutes...");
+            
+            accountDictionary = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText(Constants.UrlCrawlerTrackerFile));
+
             var startTime = DateTime.UtcNow;
-            var minuteLimit = hourLimit * 60;
-
-            // Initialize dictionary
-            accountDictionary = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText("../../Logic/UrlCrawlerTracker.txt"));
-            var count = int.Parse(accountDictionary[accountCode]);
-
             while ((DateTime.UtcNow - startTime).TotalMinutes < minuteLimit)
             {
-                try
-                {
-                    var url = $"http://rules.rewardpromo.com/rules/{accountCode}-{count}";
-
-                    var request = WebRequest.Create(url);
-                    request.Method = "GET";
-                    var response = (HttpWebResponse)request.GetResponse();
-
-                    if((int)response.StatusCode == 200)
-                    {
-                        using (StreamWriter sw = File.AppendText("../../Logic/UrlsFound.txt"))
-                        {
-                            sw.WriteLine($"{url} - {DateTime.Now.ToString()}");
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    Console.Write($"Exception occured: {ex.Message}\n");
-                }
-
-                UpdateCounter(ref count, accountCode);
+                RequestUrl(accountCode, startingNumber);
+                UpdateCounter(ref startingNumber, accountCode);
                 RandomSleep();
             }
         }
 
-        private void UpdateCounter(ref int count, string accountCode)
+        public void LimitExecute(string accountCode, int startingNumber, int endingNumber)
         {
-            count++;
-            accountDictionary[accountCode] = count.ToString();
-            File.WriteAllText("../../Logic/UrlCrawlerTracker.txt", new JavaScriptSerializer().Serialize(accountDictionary));
+            Console.Clear();
+            Console.WriteLine($"Running logic until {accountCode}-{endingNumber}...");
+
+            accountDictionary = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText(Constants.UrlCrawlerTrackerFile));
+
+            while (startingNumber < endingNumber)
+            {
+                RequestUrl(accountCode, startingNumber);
+                UpdateCounter(ref startingNumber, accountCode);
+                RandomSleep();
+            }
+        }
+
+        private void RequestUrl(string accountCode, int pdfNumber)
+        {
+            try
+            {
+                var url = $"http://rules.rewardpromo.com/rules/{accountCode}-{pdfNumber}";
+
+                var request = WebRequest.Create(url);
+                request.Method = "GET";
+                request.Timeout = 10000;
+
+                var response = (HttpWebResponse)request.GetResponse();
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    Console.WriteLine($"A valid request was received from {url}");
+                    using (StreamWriter sw = File.AppendText(Constants.UrlsFoundFile))
+                    {
+                        sw.WriteLine($"{url} - {DateTime.Now.ToString()}");
+                    }
+                }
+
+            }
+            catch (Exception) {}
+        }
+
+        private void UpdateCounter(ref int pdfNumber, string accountCode)
+        {
+            pdfNumber++;
+            accountDictionary[accountCode] = pdfNumber.ToString();
+            File.WriteAllText(Constants.UrlCrawlerTrackerFile, new JavaScriptSerializer().Serialize(accountDictionary));
         }
 
         private void RandomSleep()

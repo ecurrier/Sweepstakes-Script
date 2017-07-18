@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Constants.cs" />
     <Compile Include="Logic\UrlCrawlerLogic.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
